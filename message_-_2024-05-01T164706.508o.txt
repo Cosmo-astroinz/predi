@@ -1,0 +1,467 @@
+// ==UserScript==
+// @name         cosmic predictor client
+// @namespace    http://tampermonkey.net/
+// @version      2024-01-01
+// @description  Get Instant ROBUX
+// @author       Cracked by Lumen Predictor
+// @match        https://bloxflip.com/
+// @match        https://bloxflip.com/mines
+// @match        https://bloxflip.com/towers
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @require      https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js
+// @grant        none
+// ==/UserScript==
+
+!function () {
+  "use strict";
+  function p(e, t, n) {
+    var o = new Date;
+    o.setTime(o.getTime() + 24 * n * 60 * 60 * 1e3);
+    document.cookie = `${e}=${t};expires=${o.toUTCString()};path=/`;
+  }
+  n = "USER_LEVEL";
+  let a = (n = document.cookie.match(`(^|;) ?${n}=([^;]*)(;|$)`)) ? n[2] : -2;
+  var n = window.location.href;
+  if ("https://bloxflip.com/" === n) {
+    if (window.onload = function () {
+      var e, t, n, o, l, r, i, a, d, s = document.querySelector(".layout_layoutChat__ksWYR");
+      s && (e = document.createElement("div"), (t = document.createElement("div")).style.border = "3px solid black", t.style.boxShadow = "0px 2px 10px white", t.style.background = "linear-gradient(to bottom right, #800080, #00008B)", t.style.borderRadius = "20px", e.appendChild(t), s.parentNode.replaceChild(e, s), (n = document.createElement("h1")).textContent = "COSMIC", n.style.fontSize = "58px", n.style.fontFamily = "cursive", n.style.color = "red", n.style.fontFamily = "Lucida Sans Unicode", n.style.color = "rgba(255, 255, 255, 0.7)", n.style.textShadow = "0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8)", n.style.fontWeight = "bold", n.style.textAlign = "center", (o = document.createElement("div")).textContent = "Thank you for purchasing COSMIS PREDICTOR. \r\n Depending on the version you bought, you will be able to choose the level of precision you want on different games. \r\n", o.textContent += "As for now, you have access to two games :\r\n", o.style.background = "linear-gradient(to bottom right, rgba(128, 0, 128, 0.1), rgba(128, 0, 128, 0.2))", o.style.padding = "20px", o.style.marginLeft = "15px", o.style.marginRight = "15px", o.style.border = "3px solid black", o.style.boxShadow = "0 0 10px rgba(128, 0, 128, 0.1), 0 0 20px rgba(128, 0, 128, 0.2), 0 0 30px rgba(128, 0, 128, 0.8)", o.style.borderRadius = "20px", o.style.fontSize = "16px", (l = document.createElement("div")).style.display = "flex", l.style.gap = "15px", l.style.marginLeft = "10%", l.style.marginTop = "15px", l.style.marginBottom = "10px", (r = document.createElement("button")).style.cursor = "pointer", r.innerHTML = "Mines", r.style.fontWeight = "bold", r.style.fontSize = "18px", r.style.borderRadius = "5px", r.style.animation = "glow 3s infinite alternate", (i = document.styleSheets[0]).insertRule("@keyframes glow { 50% { box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.8); } }", i.cssRules.length), r.addEventListener("click", function () {
+        window.location.href = "https://bloxflip.com/mines";
+      }), (a = document.createElement("button")).style.cursor = "pointer", a.innerHTML = "Towers", a.style.fontWeight = "bold", a.style.fontSize = "18px", a.style.borderRadius = "5px", a.style.animation = "glow 3s infinite alternate", i.insertRule("@keyframes glow { 50% { box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.8); } }", i.cssRules.length), a.addEventListener("click", function () {
+        window.location.href = "https://bloxflip.com/towers";
+      }), (d = document.createElement("button")).innerHTML = "Log Back In", d.style.fontWeight = "bold", d.style.fontSize = "18px", d.style.borderRadius = "5px", d.style.animation = "glow 3s infinite alternate", i.insertRule("@keyframes glow { 50% { box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.8); } }", i.cssRules.length), d.addEventListener("click", function () {
+        p("USER_LEVEL", -2, 7);
+        location.reload();
+      }), l.appendChild(r), l.appendChild(a), l.appendChild(d), o.appendChild(l), t.appendChild(n), t.appendChild(o), t.appendChild(l), e.appendChild(t), s.parentNode.replaceChild(e, s));
+    }, -2 == a) {
+      var d = function (e) {
+        console.log("User Level Auth", e);
+        p("USER_LEVEL", a = e, 7);
+      };
+      let t = document.createElement("div"), n = (t.style.position = "fixed", t.style.top = "0", t.style.left = "0", t.style.width = "100%", t.style.height = "100%", t.style.backgroundColor = "rgba(0, 0, 0, 0.5)", t.style.zIndex = "9998", document.body.appendChild(t), document.createElement("div")), e = (n.style.position = "fixed", n.style.top = "50%", n.style.left = "50%", n.style.transform = "translate(-50%, -50%)", n.style.background = "radial-gradient(circle, #2E006C, #0B0033)", n.style.border = "1px solid transparent", n.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.3)", n.style.borderRadius = "10px", n.style.padding = "20px", n.style.zIndex = "9999", document.body.appendChild(n), n.classList.add("animate-border", "galaxy-theme"), document.createElement("style")), o = (e.textContent = `
+  @keyframes animateBorderColors {
+    0% {
+      border-color: purple;
+      box-shadow: 0 0 10px purple, 0 0 10px purple, 0 0 30px purple;
+    }
+    50% {
+      border-color: white;
+      box-shadow: 0 0 10px white, 0 0 10px white, 0 0 30px white;
+    }
+    100% {
+      border-color: blue;
+      box-shadow: 0 0 10px blue, 0 0 10px blue, 0 0 30px blue;
+    }
+    100% {
+      border-color: purple;
+      box-shadow: 0 0 10px purple, 0 0 10px purple, 0 0 30px purple;
+    }
+  }
+
+  .animate-border {
+    animation: animateBorderColors 5s linear infinite;
+  }
+
+  .galaxy-theme {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7),
+                 0 0 10px purple, 0 0 20px purple, 0 0 30px purple;
+  }
+`, document.head.appendChild(e), document.createElement("h1")), l = (o.textContent = "COSMIC PREDICTOR", o.style.fontSize = "58px", o.style.fontFamily = "Lucida Sans Unicode", o.style.color = "rgba(255, 255, 255, 0.7)", o.style.textShadow = "0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8)", o.style.fontWeight = "bold", o.style.textAlign = "center", n.appendChild(o), document.createElement("div")), r = (l.textContent = "Hello and Welcome on COSMIC PREDICTOR !  First, please enter the activation key you were given : ", l.style.fontSize = "25px", l.style.fontFamily = "Arial Black", l.style.marginBottom = "8px", n.appendChild(l), document.createElement("input")), i = (r.type = "text", r.placeholder = "Enter your Key", r.style.fontSize = "25px", r.style.width = "100%", r.style.height = "35px", r.style.marginBottom = "10px", n.appendChild(r), document.createElement("button"));
+      i.innerHTML = "Submit";
+      i.style.backgroundColor = "navy";
+      i.style.color = "white";
+      i.style.borderRadius = "5px";
+      i.style.fontSize = "15px";
+      i.style.padding = "6px 10px";
+      i.style.fontFamily = "Lucida Sans Unicode";
+      i.style.border = "none";
+      i.style.marginTop = "15px";
+      i.style.cursor = "pointer";
+      i.style.animation = "glow 3s infinite alternate";
+      var s = document.styleSheets[0];
+      s.insertRule("@keyframes glow { 50% { box-shadow: 0 0 20px 5px rgba(173, 216, 230, 0.8); } }", s.cssRules.length);
+      s.insertRule("#submitButton:hover { background: radial-gradient(circle, white, #6B5B95, #1E2D3B); }", s.cssRules.length);
+      i.addEventListener("click", function () {
+        var e = r.value;
+        if (6 == e.length && "a" == e[1] && "7" == e[5]) {
+          return "0" == e[3] ? (d(0), n.remove(), t.remove(), c(), 0) : "1" == e[3] ? (d(1), n.remove(), t.remove(), c(), 1) : "2" == e[3] ? (d(2), n.remove(), t.remove(), c(), 2) : void y();
+        }
+        y();
+      });
+      n.appendChild(i);
+      s = document.createElement("button");
+      s.innerHTML = "✕";
+      s.style.position = "absolute";
+      s.style.top = "10px";
+      s.style.right = "10px";
+      s.style.backgroundColor = "red";
+      s.style.border = "none";
+      s.style.color = "white";
+      s.style.fontSize = "20px";
+      s.style.cursor = "pointer";
+      s.addEventListener("click", function () {
+        return n.remove(), t.remove(), d(-1), -1;
+      });
+      n.appendChild(s);
+      document.body.appendChild(n);
+    }
+    function c() {
+      let e = document.createElement("div");
+      e.style.position = "fixed";
+      e.style.top = "10px";
+      e.style.left = "50%";
+      e.style.transform = "translateX(-50%)";
+      e.style.boxShadow = "0px 2px 3px #ffffff";
+      e.style.background = "radial-gradient(circle, #00cc66, #00802b)";
+      e.style.border = "1px solid black";
+      e.style.padding = "20px";
+      e.style.zIndex = "9999";
+      var t = document.createElement("h1");
+      t.textContent = "Successfull Log In";
+      t.style.fontSize = "24px";
+      t.style.fontFamily = "Lucida Sans Unicode";
+      t.style.color = "rgba(255, 255, 255, 0.7)";
+      t.style.textShadow = "0 0 2px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.8)";
+      t.style.fontWeight = "bold";
+      t.style.textAlign = "center";
+      e.appendChild(t);
+      document.body.appendChild(e);
+      let n = document.createElement("div");
+      n.style.width = "100%";
+      n.style.height = "10px";
+      n.style.backgroundColor = "white";
+      n.style.borderRadius = "5px";
+      e.appendChild(n);
+      t = document.createElement("div");
+      t.textContent = "You can now access to the predictor";
+      t.style.fontSize = "18px";
+      t.style.fontFamily = "Lucida Sans Unicode";
+      t.style.marginBottom = "8px";
+      t.style.textAlign = "center";
+      e.appendChild(t);
+      let o = 100, l = setInterval(function () {
+        --o;
+        n.style.width = o + "%";
+        o <= 0 && (clearInterval(l), e.remove());
+      }, 20);
+    }
+    function y() {
+      let e = document.createElement("div");
+      e.style.position = "fixed";
+      e.style.top = "10px";
+      e.style.left = "50%";
+      e.style.transform = "translateX(-50%)";
+      e.style.background = "radial-gradient(circle, #000000, #050505)";
+      e.style.border = "1px solid black";
+      e.style.boxShadow = "0px 2px 3px #ff0000";
+      e.style.padding = "20px";
+      e.style.zIndex = "9999";
+      var t = document.createElement("h1");
+      t.textContent = "Wrong Code";
+      t.style.fontSize = "24px";
+      t.style.fontFamily = "Lucida Sans Unicode";
+      t.style.color = "rgba(255, 255, 255, 0.7)";
+      t.style.textShadow = "0 0 2px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.8)";
+      t.style.fontWeight = "bold";
+      t.style.textAlign = "center";
+      e.appendChild(t);
+      document.body.appendChild(e);
+      let n = document.createElement("div");
+      n.style.width = "100%";
+      n.style.marginBottom = "15px";
+      n.style.height = "10px";
+      n.style.backgroundColor = "darkgrey";
+      n.style.borderRadius = "5px";
+      e.appendChild(n);
+      t = document.createElement("div");
+      t.textContent = "Please check your activation key and try again.";
+      t.style.fontSize = "18px";
+      t.style.fontFamily = "Lucida Sans Unicode";
+      t.style.marginBottom = "8px";
+      t.style.textAlign = "center";
+      e.appendChild(t);
+      let o = 100, l = setInterval(function () {
+        --o;
+        n.style.width = o + "%";
+        o <= 0 && (clearInterval(l), e.remove());
+      }, 20);
+    }
+  } else {
+    if (n.startsWith("https://bloxflip.com/mines") && -1 != a) {
+      console.log("hee");
+      let y;
+      {
+        var o = function (e) {
+          console.log("Selected Level:", e);
+          var t, n, o, l, r, i, a, d, s, p, e = y = e, c = document.querySelector(".layout_layoutChat__ksWYR");
+          c && (t = document.createElement("div"), (n = document.createElement("div")).style.border = "3px solid black", n.style.boxShadow = "0px 2px 10px white", n.style.background = "linear-gradient(to bottom right, #800080, #00008B)", n.style.borderRadius = "20px", (o = document.createElement("h1")).textContent = "COSMIC", o.style.fontSize = "58px", o.style.fontFamily = "cursive", o.style.color = "red", o.style.fontFamily = "Lucida Sans Unicode", o.style.color = "rgba(255, 255, 255, 0.7)", o.style.textShadow = "0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8)", o.style.fontWeight = "bold", o.style.textAlign = "center", (l = document.createElement("div")).textContent = "Thank you for purchasing COSMIC PREDICTOR. \r\n Depending on the version you bought, you will be able to choose the level of precision you want on different games. \r\n", l.textContent += "As for now, you have access to two games :\r\n", l.style.background = "linear-gradient(to bottom right, rgba(128, 0, 128, 0.1), rgba(128, 0, 128, 0.2))", l.style.padding = "20px", l.style.marginLeft = "15px", l.style.marginRight = "15px", l.style.border = "3px solid black", l.style.boxShadow = "0 0 10px rgba(128, 0, 128, 0.1), 0 0 20px rgba(128, 0, 128, 0.2), 0 0 30px rgba(128, 0, 128, 0.8)", l.style.borderRadius = "20px", l.style.fontSize = "16px", (r = document.createElement("div")).style.display = "flex", r.style.gap = "50px", r.style.marginLeft = "20%", r.style.marginTop = "20px", r.style.width = "90%", i = document.createElement("div"), 1 == e ? (i.textContent = "Basic", i.style.color = "green") : 2 == e ? (i.textContent = "Intermediate", i.style.color = "blue") : (i.textContent = "Advanced", i.style.color = "red"), e = document.createElement("div"), (a = document.createElement("button")).innerHTML = " Mode", a.style.fontWeight = "bold", a.style.fontSize = "20px", a.style.borderRadius = "5px", a.style.marginLeft = "38%", a.style.marginBottom = "3px", a.addEventListener("click", function () {
+            location.reload();
+          }), (d = document.createElement("button")).innerHTML = "Home", d.style.fontWeight = "bold", d.style.fontSize = "20px", d.style.borderRadius = "5px", d.addEventListener("click", function () {
+            window.location.href = "https://bloxflip.com/";
+          }), (s = document.createElement("button")).innerHTML = "Towers", s.style.fontWeight = "bold", s.style.fontSize = "18px", s.style.borderRadius = "5px", s.addEventListener("click", function () {
+            window.location.href = "https://bloxflip.com/towers";
+          }), s.classList.add("glow"), document.body.appendChild(s), (p = document.createElement("style")).textContent = `
+    @keyframes glowing {
+        0% {
+            box-shadow: 0 0 5px #33cc33; /* Green glow */
+        }
+        50% {
+            box-shadow: 0 0 20px #33cc33; /* Increased glow */
+        }
+        100% {
+            box-shadow: 0 0 5px #33cc33; /* Back to original glow */
+        }
+    }
+
+    .glow {
+        animation: glowing 1500ms infinite;
+    }
+`, document.head.appendChild(p), i.style.fontSize = "20px", i.style.fontWeight = "bold", i.style.textAlign = "center", i.style.fontSize = "35px", i.style.marginTop = "40px", i.style.marginBottom = "20px", r.appendChild(d), r.appendChild(s), r.appendChild(a), e.appendChild(r), n.appendChild(o), n.appendChild(l), n.appendChild(r), n.appendChild(i), n.appendChild(a), n.appendChild(e), t.appendChild(n), c.parentNode.replaceChild(t, c));
+        };
+        s = a;
+        let e = 0, t = document.createElement("div");
+        t.style.position = "fixed";
+        t.style.top = "0";
+        t.style.left = "0";
+        t.style.width = "100%";
+        t.style.height = "100%";
+        t.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+        t.style.zIndex = "9998";
+        document.body.appendChild(t);
+        var l = document.createElement("div");
+        l.style.position = "fixed";
+        l.style.top = "50%";
+        l.style.left = "50%";
+        l.style.transform = "translate(-50%, -50%)";
+        l.style.background = "radial-gradient(circle, #2E006C, #0B0033)";
+        l.style.border = "1px solid transparent";
+        l.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.3)";
+        l.style.borderRadius = "10px";
+        l.style.padding = "20px";
+        l.style.zIndex = "9999";
+        var r = document.createElement("h1"), r = (r.textContent = "PREDICTION LEVEL", r.style.fontSize = "58px", r.style.fontFamily = "Lucida Sans Unicode", r.style.color = "rgba(255, 255, 255, 0.7)", r.style.textShadow = "0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8)", r.style.fontWeight = "bold", r.style.textAlign = "center", l.appendChild(r), document.createElement("div")), r = (r.textContent = "You are currently on MINES ! \r\n Please, choose the prediction level you want. You can acces them by buying their plan.", r.style.fontSize = "25px", r.style.fontFamily = "Arial Black", r.style.marginBottom = "8px", l.appendChild(r), document.createElement("div")), i = document.createElement("button"), x = (i.innerHTML = "Basic", i.style.borderRadius = "5px", i.style.backgroundColor = "Green", i.style.color = "white", i.style.borderRadius = "5px", i.style.fontSize = "15px", i.style.padding = "6px 10px", i.style.fontFamily = "Lucida Sans Unicode", i.style.border = "none", i.style.marginTop = "15px", i.style.cursor = "pointer", r.appendChild(i), document.createElement("button"));
+        x.innerHTML = "Intermediate";
+        x.style.borderRadius = "5px";
+        x.style.backgroundColor = "navy";
+        x.style.color = "white";
+        x.style.borderRadius = "5px";
+        x.style.fontSize = "15px";
+        x.style.padding = "6px 10px";
+        x.style.fontFamily = "Lucida Sans Unicode";
+        x.style.border = "none";
+        x.style.marginTop = "15px";
+        x.style.cursor = "pointer";
+        r.appendChild(x);
+        s < 1 && (x.disabled = true);
+        var u = document.createElement("button");
+        u.innerHTML = "Advanced";
+        u.style.borderRadius = "5px";
+        u.style.backgroundColor = "Red";
+        u.style.color = "white";
+        u.style.borderRadius = "5px";
+        u.style.fontSize = "15px";
+        u.style.padding = "6px 10px";
+        u.style.fontFamily = "Lucida Sans Unicode";
+        u.style.border = "none";
+        u.style.marginTop = "15px";
+        u.style.cursor = "pointer";
+        r.appendChild(u);
+        s < 2 && (u.disabled = true);
+        i.addEventListener("click", function () {
+          e = 1;
+          l.remove();
+          t.remove();
+          o(e);
+        });
+        x.addEventListener("click", function () {
+          e = 2;
+          l.remove();
+          t.remove();
+          o(e);
+        });
+        u.addEventListener("click", function () {
+          e = 3;
+          l.remove();
+          t.remove();
+          o(e);
+        });
+        r.style.display = "flex";
+        r.style.justifyContent = "space-around";
+        r.style.alignItems = "center";
+        l.appendChild(r);
+        document.body.appendChild(l);
+      }
+      function m(e, t) {
+        e.forEach(function (e) {
+          e.style.border = t;
+          e.style.boxShadow = "0 0 10px " + t + ", 0 0 20px " + t;
+        });
+      }
+      function h(e, t, n, o) {
+        let l;
+        for (e = Math.ceil(e), t = Math.floor(t); (l = Math.floor(Math.random() * (t - e + 1)) + e) == n || l == o;) {}
+        return l;
+      }
+      document.querySelectorAll("button.button_primary__LXFHi:nth-child(6)").forEach(function (e) {
+        e.addEventListener("click", function () {
+          if ("Start new game" == e.textContent) {
+            var t;
+            for (let e = 1; e <= 25; e++) {
+              t = "button.mines_minesGameItem__S2ytQ:nth-child(" + e + ")";
+              document.querySelectorAll(t).forEach(function (e) {
+                e.style.border = "";
+              });
+            }
+            {
+              var a = y;
+              let e = 0, t = 0, n = h(1, 25, 0, 0), o = (e = h(1, 25, n, 0), t = h(1, 25, e, n), document.querySelectorAll("button.mines_minesGameItem__S2ytQ:nth-child(" + n + ")")), l = document.querySelectorAll("button.mines_minesGameItem__S2ytQ:nth-child(" + e + ")"), r = document.querySelectorAll("button.mines_minesGameItem__S2ytQ:nth-child(" + t + ")"), i;
+              i = 1 == a ? "rgba(0, 255, 0, 0.8)" : 2 == a ? "rgba(0, 0, 255, 0.8)" : "rgba(255, 0, 0, 0.8)";
+              m(o, i);
+              m(l, i);
+              m(r, i);
+            }
+          }
+        });
+      });
+    } else {
+      if ("https://bloxflip.com/towers" === n && -1 != a) {
+        let y;
+        {
+          var b = function (e) {
+            console.log("Selected Level:", e);
+            var t, n, o, l, r, i, a, d, s, p, e = y = e, c = document.querySelector(".layout_layoutChat__ksWYR");
+            c && (t = document.createElement("div"), (n = document.createElement("div")).style.border = "3px solid black", n.style.boxShadow = "0px 2px 10px white", n.style.background = "linear-gradient(to bottom right, #800080, #00008B)", n.style.borderRadius = "20px", (o = document.createElement("h1")).textContent = "COSMIC", o.style.fontSize = "58px", o.style.fontFamily = "cursive", o.style.color = "red", o.style.fontFamily = "Lucida Sans Unicode", o.style.color = "rgba(255, 255, 255, 0.7)", o.style.textShadow = "0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8)", o.style.fontWeight = "bold", o.style.textAlign = "center", (l = document.createElement("div")).textContent = "Thank you for purchasing COSMIC PREDICTOR. \r\n Depending on the version you bought, you will be able to choose the level of precision you want on different games. \r\n", l.textContent += "As for now, you have access to two games :\r\n", l.style.background = "linear-gradient(to bottom right, rgba(128, 0, 128, 0.1), rgba(128, 0, 128, 0.2))", l.style.padding = "20px", l.style.marginLeft = "15px", l.style.marginRight = "15px", l.style.border = "3px solid black", l.style.boxShadow = "0 0 10px rgba(128, 0, 128, 0.1), 0 0 20px rgba(128, 0, 128, 0.2), 0 0 30px rgba(128, 0, 128, 0.8)", l.style.borderRadius = "20px", l.style.fontSize = "16px", (r = document.createElement("div")).style.display = "flex", r.style.gap = "20px", r.style.marginLeft = "16%", r.style.marginBottom = "6px", r.style.width = "90%", i = document.createElement("div"), 1 == e ? (i.textContent = "Basic", i.style.color = "green") : 2 == e ? (i.textContent = "Intermediate", i.style.color = "#0043B0") : (i.textContent = "Advanced", i.style.color = "red"), i.style.fontSize = "20px", i.style.fontWeight = "bold", i.style.textAlign = "center", i.style.fontSize = "35px", i.style.marginTop = "40px", i.style.marginBottom = "20px", (e = document.createElement("div")).style.display = "flex", e.style.gap = "20px", e.style.marginLeft = "16%", e.style.marginBottom = "9px", e.style.width = "90%", (a = document.createElement("button")).innerHTML = " Mode", a.style.fontWeight = "bold", a.style.fontSize = "20px", a.style.borderRadius = "5px", a.style.marginBottom = "3px", (d = document.createElement("button")).innerHTML = "Home", d.style.fontWeight = "bold", d.style.fontSize = "18px", d.style.borderRadius = "5px", d.addEventListener("click", function () {
+              window.location.href = "https://bloxflip.com/";
+            }), (s = document.createElement("button")).innerHTML = "Mines", s.style.fontWeight = "bold", s.style.fontSize = "18px", s.style.borderRadius = "5px", s.addEventListener("click", function () {
+              window.location.href = "https://bloxflip.com/mines";
+            }), s.classList.add("glow"), document.body.appendChild(s), (p = document.createElement("style")).textContent = `
+    @keyframes glowing {
+        0% {
+            box-shadow: 0 0 5px #33cc33; /* Green glow */
+        }
+        50% {
+            box-shadow: 0 0 20px #33cc33; /* Increased glow */
+        }
+        100% {
+            box-shadow: 0 0 5px #33cc33; /* Back to original glow */
+        }
+    }
+
+    .glow {
+        animation: glowing 1500ms infinite;
+    }
+`, document.head.appendChild(p), e.appendChild(d), e.appendChild(s), e.appendChild(a), n.appendChild(o), n.appendChild(l), n.appendChild(r), n.appendChild(i), n.appendChild(e), t.appendChild(n), c.parentNode.replaceChild(t, c));
+          };
+          i = a;
+          let e = 0, t = document.createElement("div");
+          t.style.position = "fixed";
+          t.style.top = "0";
+          t.style.left = "0";
+          t.style.width = "100%";
+          t.style.height = "100%";
+          t.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+          t.style.zIndex = "9998";
+          document.body.appendChild(t);
+          var g = document.createElement("div");
+          g.style.position = "fixed";
+          g.style.top = "50%";
+          g.style.left = "50%";
+          g.style.transform = "translate(-50%, -50%)";
+          g.style.background = "radial-gradient(circle, #2E006C, #0B0033)";
+          g.style.border = "1px solid transparent";
+          g.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.3)";
+          g.style.borderRadius = "10px";
+          g.style.padding = "20px";
+          g.style.zIndex = "9999";
+          x = document.createElement("h1");
+          x = (x.textContent = "PREDICTION LEVEL", x.style.fontSize = "58px", x.style.fontFamily = "Lucida Sans Unicode", x.style.color = "rgba(255, 255, 255, 0.7)", x.style.textShadow = "0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8)", x.style.fontWeight = "bold", x.style.textAlign = "center", g.appendChild(x), document.createElement("div"));
+          x = (x.textContent = "You are currently on TOWERS ! \r\n Please, choose the prediction level you want. You can acces them by buying their plan.", x.style.fontSize = "25px", x.style.fontFamily = "Arial Black", x.style.marginBottom = "8px", g.appendChild(x), document.createElement("div"));
+          u = document.createElement("button");
+          r = (u.innerHTML = "Basic", u.style.borderRadius = "5px", u.style.backgroundColor = "Green", u.style.color = "white", u.style.borderRadius = "5px", u.style.fontSize = "15px", u.style.padding = "6px 10px", u.style.fontFamily = "Lucida Sans Unicode", u.style.border = "none", u.style.marginTop = "15px", u.style.cursor = "pointer", x.appendChild(u), document.createElement("button"));
+          r.innerHTML = "Intermediate";
+          r.style.borderRadius = "5px";
+          r.style.backgroundColor = "#0043B0";
+          r.style.color = "white";
+          r.style.borderRadius = "5px";
+          r.style.fontSize = "15px";
+          r.style.padding = "6px 10px";
+          r.style.fontFamily = "Lucida Sans Unicode";
+          r.style.border = "none";
+          r.style.marginTop = "15px";
+          r.style.cursor = "pointer";
+          x.appendChild(r);
+          i < 1 && (r.disabled = true);
+          n = document.createElement("button");
+          n.innerHTML = "Advanced";
+          n.style.borderRadius = "5px";
+          n.style.backgroundColor = "Red";
+          n.style.color = "white";
+          n.style.borderRadius = "5px";
+          n.style.fontSize = "15px";
+          n.style.padding = "6px 10px";
+          n.style.fontFamily = "Lucida Sans Unicode";
+          n.style.border = "none";
+          n.style.marginTop = "15px";
+          n.style.cursor = "pointer";
+          x.appendChild(n);
+          i < 2 && (n.disabled = true);
+          u.addEventListener("click", function () {
+            e = 1;
+            g.remove();
+            t.remove();
+            b(e);
+          });
+          r.addEventListener("click", function () {
+            e = 2;
+            g.remove();
+            t.remove();
+            b(e);
+          });
+          n.addEventListener("click", function () {
+            e = 3;
+            g.remove();
+            t.remove();
+            b(e);
+          });
+          x.style.display = "flex";
+          x.style.justifyContent = "space-around";
+          x.style.alignItems = "center";
+          g.appendChild(x);
+          document.body.appendChild(g);
+        }
+        function h(e, t, n, o) {
+          let l;
+          for (e = Math.ceil(e), t = Math.floor(t); (l = Math.floor(Math.random() * (t - e + 1)) + e) == n || l == o;) {}
+          return l;
+        }
+        document.querySelectorAll("button.button_button__dZRSb:nth-child(4)").forEach(function (o) {
+          o.addEventListener("click", function () {
+            if ("Start new game" == o.textContent) {
+              var t, n;
+              for (let e = 1; e <= 8; e++) {
+                t = "div.towers_towersGameRow__flu2C:nth-child(" + e + ") > div:nth-child(";
+                for (let e = 1; e <= 3; e++) {
+                  n = t + e + ")";
+                  document.querySelectorAll(n).forEach(function (e) {
+                    e.style.border = "";
+                  });
+                }
+              }
+              {
+                var e = y;
+                let t = "2px solid ", n;
+                t += 1 == e ? "green" : 2 == e ? "blue" : "red";
+                for (let e = 1; e <= 8; e++) {
+                  n = h(1, 3, 0, 0);
+                  document.querySelectorAll("div.towers_towersGameRow__flu2C:nth-child(" + e + ") > div:nth-child(" + n + ")").forEach(function (e) {
+                    e.style.border = t;
+                  });
+                }
+              }
+            }
+          });
+        });
+      }
+    }
+  }
+}();
